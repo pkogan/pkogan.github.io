@@ -3,7 +3,7 @@
 Desarrollado por Pablo Kogan para Diario Rio Negro 08/04/16-->
 <html>
     <head>
-        <title>Calculadora Gas Nuevo Tarifario</title>
+        <title>Calculadora Gas Nuevo Tarifario Neuquen</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
@@ -47,18 +47,28 @@ Desarrollado por Pablo Kogan para Diario Rio Negro 08/04/16-->
                 var consumo = parseInt(document.getElementById('consumo').value);
                 var salida = document.getElementById('salida');
 
-                m = minimos[cat];
-                t = tarifario[cat];
+                var m = minimos[cat];
+                var t = tarifario[cat];
+                var gasto=0;
+                var gastoa=0;
                 var tt = 0;
+                var cons=consumo;
                 for (var i in t) {
+                        
                     if (i > consumo || i == 'NULL') {
-                        tt = t[i];
+                        gasto=cons*t[i][0]+gasto;
+                        gastoa=cons*t[i][1]+gastoa;
+                        
                         break;
+                    }else{
+                        gasto=i*t[i][0]+gasto;
+                        gastoa=i*t[i][1]+gastoa;
+                        cons=consumo-i;
                     }
                 }
-                gasto = m + consumo * tt[0];
+                gasto = m + gasto*1.21;
                 gasto=gasto.toFixed(2);
-                gastoa = m + consumo * tt[1];
+                gastoa = m + gastoa*1.21;
                 gastoa=gastoa.toFixed(2);
 
                 salida.innerHTML = 'Si ahorras un 15% vas a gastar: $' + gastoa +
