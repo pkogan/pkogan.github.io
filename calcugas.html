@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Desarrollado por Pablo Kogan para Diario Rio Negro 08/04/16-->
+<html>
+    <head>
+        <title>Calculadora Gas Nuevo Tarifario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var minimos = new Array(8);
+            var tarifario = new Array(8);
+
+            minimos['R1'] = 23.28;
+            tarifa1 = new Array(3);
+            tarifa1[1200] = [0.56, 0.34];
+            tarifa1[3400] = [1.11, 0.67];
+            tarifa1['NULL'] = [1.54, 0.94];
+            tarifario['R1'] = tarifa1;
+            minimos['R2-1'] = 23.28;
+            tarifario['R2-1'] = tarifa1;
+            minimos['R2-2'] = 23.28;
+            tarifario['R2-2'] = tarifa1;
+            minimos['R2-3'] = 24.46;
+            tarifa2 = new Array(3);
+            tarifa2[1200] = [0.58, 0, 35];
+            tarifa2[3400] = [1.16, 0.7];
+            tarifa2['NULL'] = [1.61, 0.98];
+            tarifario['R2-3'] = tarifa2;
+            minimos['R3-1'] = 54.17;
+            tarifa3 = new Array(3);
+            tarifa3[1200] = [1.15, 0.7];
+            tarifa3[3400] = [2.28, 1.39];
+            tarifa3['NULL'] = [3.17, 1.9];
+            tarifario['R3-1'] = tarifa3;
+            minimos['R3-2'] = 54.17;
+            tarifario['R3-2'] = tarifa3;
+            minimos['R3-3'] = 54.17;
+            tarifario['R3-3'] = tarifa3;
+            minimos['R3-4'] = 54.17;
+            tarifario['R3-4'] = tarifa3;
+
+
+
+            console.log(tarifario);
+            function calcular() {
+                var cat = document.getElementById('categoria').value;
+                var consumo = parseInt(document.getElementById('consumo').value);
+                var salida = document.getElementById('salida');
+
+                m = minimos[cat];
+                t = tarifario[cat];
+                var tt = 0;
+                for (var i in t) {
+                    if (i > consumo || i == 'NULL') {
+                        tt = t[i];
+                        break;
+                    }
+                }
+                gasto = m + consumo * tt[0];
+                gasto=gasto.toFixed(2);
+                gastoa = m + consumo * tt[1];
+                gastoa=gastoa.toFixed(2);
+
+                salida.innerHTML = 'Si ahorras un 15% vas a gastar: $' + gastoa +
+                        ' y si no vas a gastar: $' + gasto;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Calculadora Gas Nuevo Tarifario</h3>
+
+        <label>Categoria</label><select id="categoria">
+            <option value="R1">R1</option>
+            <option value="R2-1">R2-1</option>
+            <option value="R2-2">R2-2</option>
+            <option value="R2-3">R2-3</option>
+            <option value="R3-1">R3-1</option>
+            <option value="R3-2">R3-2</option>
+            <option value="R3-3">R3-3</option>
+            <option value="R3-4">R3-4</option>
+        </select><br/>
+        <label>Consumo en m3</label> <input id="consumo" type="text"><br/>
+        <button onclick="calcular()">Calcular</button>
+
+
+        <p id="salida"></p>
+    </body>
+</html>
