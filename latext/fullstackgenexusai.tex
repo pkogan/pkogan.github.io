@@ -1,0 +1,220 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{CV}
+\author{\LaTeX{} pkogan}
+\date{Junio 2023}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Pablo}{Kogan}{Full-Stack Developer - Project Leader}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 
+%\backgroundcolor{g}[rgb]{0.8,1,1} 
+%\backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+%\footnotesize
+%\begin{center}
+%\href{https://pkogan.github.io/CV/pk202306en.pdf}{CV in Inglish}  |    
+%\href{https://pkogan.github.io/CV/pk202306es.pdf}{CV en Español}    
+%\end{center}
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{avatar}
+\end{center}
+
+\bg{cvgreen}{white}{About me}\\[0.5em]
+
+{\footnotesize
+Full-Stack Developer with experience +20 years in developing innovative solutions, leading teams, and knowledge transfer. Additionally, I work as a teacher and manage extension, research, and innovation projects at the National University of Comahue. I am seeking new development challenges that provide tools to improve society and industry.
+}
+\bigskip
+
+\bg{cvgreen}{white}{Personal} \\[0.5em]
+Pablo Kogan
+
+nationality: Argentina
+
+1980
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+Full-Stack Developer ~•~ TDD ~•~ CI/CD ~•~ DataData Analytics and Modeling ~•~ PHP ~•~ JS  ~•~ Genexus ~•~ Docker ~•~ Linux
+
+\bigskip
+
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Other Skills}\\[0.5em]
+
+Team leadership.
+Very proactive with self learning 
+and self managment skills.
+Ability to work on teams, learn and teach.
+\bigskip
+
+\bg{cvgreen}{white}{Interests}\\[0.5em]
+
+\texttt{Free Software} ~/~ \texttt{AI} ~/~ \texttt{Electoral System} ~/~  \texttt{Learning Platform} 
+
+\vspace{2em}
+\bigskip
+%\infobubble{\faAt}{cvgreen}{white}{pablo.kogan@gmail.com}
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/pablo-kogan/}{pablo-kogan}}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/pkogan}{pkogan}}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Work Experience}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2014--present}{Full-Stack developer - Project Leader - IT Manager}{Universidad Nacional del Comahue}{ Neuquén \color{cvred}}{Project Management, Project Architect, Software
+development in learning platform and electoral system. Manage extension, research, and innovation projects.  }{unco.png} \\
+    \cvevent{2010--2014}{Full-Stack developer}{Freelance - cortitoyalpie }{Neuquén \color{cvred}}{Software development of Oil\&Gas | Games | Learning solutions. }{cortito.png}\\
+    \cvevent{2007--2010}{Full-Stack developer - Project leader - IT Manager}{ciar SA}{Neuquén \color{cvred}}{Software development of GIS to Oil\&Gas solutions. }{ciar.jpg}\\
+      \cvevent{2005--present}{Associate Professor}{Universidad Nacional del Comahue}{ Neuquén \color{cvred}}{Teacher in Programming and Computer Theory Departments for Computer Science Bachelor Degree. Courses: IA Game, Framework and Interoperability }{unco.png} 
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Languages}
+\begin{tabular}{l | ll}
+\textbf{Spanish} &  & {\phantom{x}\footnotesize mother} \\
+\textbf{Inglish} &  & \pictofraction{\faCircle}{cvgreen}{2}{black!30}{1}{\tiny}
+\end{tabular}
+\bigskip
+\section*{Development and Publications}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    \href{https://hornero.fi.uncoma.edu.ar/hornero/#/inicio}{hornero} &  \emph{Competir+motivar+hornero= aprender programación}, in: TE\&ET 2016. \\
+    \href{https://resultados.uncoma.edu.ar}{gukena} & \emph{Gukena: escrutinio descentralizado para voto ponderado}, in: JAIIO 2018.\\
+    \href{https://wene.fi.uncoma.edu.ar}{wene} & \emph{Digital Certificate Management}. 
+\end{tabular}
+\bigskip
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Programming}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{html, css} &  \barrule{0.4}{0.5em}{cvgreen}\\
+     \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.53}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{PHP} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.45}{0.4em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Genexus} & \barrule{0.5}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{bash} & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{sql} & \barrule{0.55}{0.5em}{cvpurple} \\
+\end{tabular}
+\end{minipage}
+
+\section*{Degrees}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2020--present}{Master in Computer Science }{Universidad Nacional del Comahue}{Neuquén\color{headerblue}}{}{unco.png}  \\
+    \cvevent{2015--present}{Master in Science, Technology and Innovation}{Universidad Nacional de Río Negro}{Bariloche\color{headerblue}}{}{unrn.jpg}  \\
+    \cvevent{1999--2006}{Bachelor in Computer Science}{Universidad Nacional del Comahue}{Neuquén\color{headerblue}}{}{unco.png}
+\end{tabular}
+\vspace{3em}
+
+%  \begin{minipage}[t]{0.3\textwidth}
+% % \section*{Certificates \& Grants}
+% % \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+% %     1708 & Captain's Certificates \\
+% %     1710 & Travel grant \\
+% %     1715--1716 & Grant from the Pirate's Company
+% % \end{tabular}
+% % \bigskip
+
+% \section*{Languages}
+% \begin{tabular}{l | ll}
+% \textbf{Spanish} &  & {\phantom{x}\footnotesize mother} \\
+% \textbf{Inglish} &  & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny}
+% \end{tabular}
+% \bigskip
+
+% \end{minipage}\hfill
+% \begin{minipage}[t]{0.3\textwidth}
+% % \section*{Publications}
+% % \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+% %     2016 & \emph{Competir+ motivar+ hornero= aprender programación}, in: TE\&ET. \\
+% %     2018 & \emph{Gukena: escrutinio descentralizado para voto ponderado}, in: JAIIO\\
+% %     2022 & \emph{¿Cómo aumentar la velocidad de publicación de resultados de una elección?}, in: JAIIO\\
+% % \end{tabular}
+
+% \section*{Talks}
+% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+%     Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
+% \end{tabular}
+% \end{minipage}
+
+
+\bigskip
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Pablo Kogan %\icon{\faEnvelopeO}{cvgreen}{} R. Brizuela 819
+\icon{\faMapMarker}{cvgreen}{} General Fernandez Oro - Río Negro - Argentina \icon{\faPhone}{cvgreen}{} +542994229210 \newline\icon{\faAt}{cvgreen}{} \protect\url{pablo.kogan@gmail.com}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}

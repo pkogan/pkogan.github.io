@@ -1,0 +1,222 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{CV}
+\author{\LaTeX{} pkogan}
+\date{Junio 2023}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Pablo}{Kogan}{Desarrollador de Software - Full-Stack - Líder de Proyecto }{white} 
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 
+%\backgroundcolor{g}[rgb]{0.8,1,1} 
+%\backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+\footnotesize
+\begin{center}
+\href{https://pkogan.github.io/CV/pk202608en.pdf}{English CV}  |    
+\href{https://pkogan.github.io/CV/pk202608es.pdf}{Español CV}    
+\end{center}
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{avatar}
+\end{center}
+
+\bg{cvgreen}{white}{Resumen}\\[0.5em]
+
+{\footnotesize
+Desarrollador Full-Stack PHP con experiencia en soluciones innovadoras, liderazgo de equipos y docencia. Actualmente Consultor GenIA en Scale AI, diseñando y evaluando agentes de IA para mejorar la calidad de datos. Experiencia en proyectos de extensión, investigación e innovación en la Universidad Nacional del Comahue. Busco desafíos de desarrollo para contribuir a mejorar procesos de la sociedad y de la industria.
+%Full-Stack Developer with experience +20 years in developing innovative solutions, leading teams, and knowledge transfer. Additionally, I work as a teacher and manage extension, research, and innovation projects at the National University of Comahue. I am seeking new development challenges that provide tools to improve society and industry.
+}
+\bigskip
+
+\bg{cvgreen}{white}{Personal} \\[0.5em]
+Pablo Kogan
+
+Argentino
+
+1980
+
+\bigskip
+
+\bg{cvgreen}{white}{Áreas de especialización} \\[0.5em]
+
+Full-Stack Developer ~•~ IA Generativa ~•~ Agentes de IA ~•~ TDD ~•~ CI/CD ~•~ Análisis y Modelado de Datos ~•~ Python ~•~ SQL ~•~ C++ ~•~ PHP ~•~ JS  ~•~ Docker ~•~ Linux
+
+\bigskip
+
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Otras Habilidades}\\[0.5em]
+Dirección de equipos de desarrollo.
+Predisposición al auto-aprendizaje y auto-gestión.
+Habilidad para trabajar en equipo, aprender y enseñar.
+%Team leadership.
+%Very proactive with self learning and self managment skills.
+%Ability to work on teams, learn and teach.
+\bigskip
+
+\bg{cvgreen}{white}{Intereses}\\[0.5em]
+
+\texttt{Software Libre} ~/~ \texttt{IA Generativa} ~/~ \texttt{Agentes de IA} ~/~ \texttt{Sistemas Electorales} ~/~  \texttt{Plataformas de Enseñanza y Aprendizaje} 
+
+\vspace{2em}
+\bigskip
+%\infobubble{\faAt}{cvgreen}{white}{pablo.kogan@gmail.com}
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/pablo-kogan/}{pablo-kogan}}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/pkogan}{pkogan}}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Experiencia}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2024--actualidad}{Consultor Gen IA}{Scale AI}{ Remoto \color{cvred}}{Operaciones de proyectos de IA generativa con foco en la gestión y el análisis de datos. Diseño y evaluación de agentes de IA para medir la calidad de los datos y mejorar su desempeño y confiabilidad.}{scale.png} \\
+    \cvevent{2014--2024}{Full-Stack developer - Director de Proyectos - Secretario TIC}{Universidad Nacional del Comahue}{ Neuquén \color{cvred}}{%Project Management, Project Architect, Software development in learning platform and electoral system. Manage extension, research, and innovation projects. 
+    Dirección y gestión de Proyectos, Arquitecto de Proyectos, desarrollo de software sobre plataformas de aprendizaje y sistemas electorales}{unco.png} \\
+    \cvevent{2010--actualidad}{Full-Stack developer - Dada Scientist - Generative AI}{Freelance - cortitoyalpie }{Neuquén \color{cvred}}{Desarrollo de productos de software en industrias  Oil\&Gas | Juegos | Enseñanza | Medios digitales. Análisis de datos sobre dominios electorales. Aprendizaje automático de modelos IA.}{cortito.png}\\
+    \cvevent{2007--2010}{Full-Stack developer - Dirección de Proyectos - Gerente de Unidad de negocios de Sistemas}{ciar SA}{Neuquén \color{cvred}}{Desarrollo de productos de software GIS para la industria del Oil\&Gas. }{ciar.jpg}\\
+      \cvevent{2005--actualidad}{Profesor Adjunto}{Universidad Nacional del Comahue}{ Neuquén \color{cvred}}{
+      %Teacher in Programming and Computer Theory Departments for Computer Science Bachelor Degree.
+      Docente, investigador y extensionista del Departamento de Teoría de la Computación de la Facultad de Informática. Coordinador del Observatorio Electoral de la Universidad.}{unco.png} 
+\end{tabular}
+\vspace{1.5em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Lenguajes}
+\begin{tabular}{l | ll}
+\textbf{Español} &  & {\phantom{x}\footnotesize nativo} \\
+\textbf{Ingles} &  & \pictofraction{\faCircle}{cvgreen}{4}{black!30}{1}{\tiny}
+\end{tabular}
+\bigskip
+\section*{Desarrollos y Publicaciones}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    \href{https://hornero.fi.uncoma.edu.ar/hornero/#/inicio}{hornero} &  \emph{Competir+motivar+hornero= aprender programación}, in: TE\&ET 2016. \\
+    \href{https://resultados.uncoma.edu.ar}{gukena} & \emph{Gukena: escrutinio descentralizado para voto ponderado}, in: JAIIO 2018.\\
+    \href{https://wene.fi.uncoma.edu.ar}{wene} & \emph{Gestión de Certificados Digitales}. 
+\end{tabular}
+\bigskip
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Programación}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.5}{0.4em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{nextjs} & \barrule{0.53}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{ai agents} &  \barrule{0.4}{0.5em}{cvgreen}\\
+     \bg{skilllabelcolour}{iconcolour}{PHP} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{docker} & \barrule{0.20}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{bash} & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{sql} & \barrule{0.55}{0.5em}{cvpurple} \\
+\end{tabular}
+\end{minipage}
+
+\section*{Títulos}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2020--actualidad}{Maestria en Ciencias de la Computación}{Universidad Nacional del Comahue}{Neuquén\color{headerblue}}{}{unco.png}  \\
+    \cvevent{1999--2006}{Licenciatura en Ciencias de la Computación}{Universidad Nacional del Comahue}{Neuquén\color{headerblue}}{}{unco.png}
+\end{tabular}
+\vspace{1em}
+
+%  \begin{minipage}[t]{0.3\textwidth}
+% % \section*{Certificates \& Grants}
+% % \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+% %     1708 & Captain's Certificates \\
+% %     1710 & Travel grant \\
+% %     1715--1716 & Grant from the Pirate's Company
+% % \end{tabular}
+% % \bigskip
+
+% \section*{Languages}
+% \begin{tabular}{l | ll}
+% \textbf{Spanish} &  & {\phantom{x}\footnotesize mother} \\
+% \textbf{Inglish} &  & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny}
+% \end{tabular}
+% \bigskip
+
+% \end{minipage}\hfill
+% \begin{minipage}[t]{0.3\textwidth}
+% % \section*{Publications}
+% % \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+% %     2016 & \emph{Competir+ motivar+ hornero= aprender programación}, in: TE\&ET. \\
+% %     2018 & \emph{Gukena: escrutinio descentralizado para voto ponderado}, in: JAIIO\\
+% %     2022 & \emph{¿Cómo aumentar la velocidad de publicación de resultados de una elección?}, in: JAIIO\\
+% % \end{tabular}
+
+% \section*{Talks}
+% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+%     Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
+% \end{tabular}
+% \end{minipage}
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Pablo Kogan %\icon{\faEnvelopeO}{cvgreen}{} R. Brizuela 819
+\icon{\faMapMarker}{cvgreen}{} General Fernandez Oro - Río Negro - Argentina \icon{\faPhone}{cvgreen}{} +542994229210 \newline\icon{\faAt}{cvgreen}{} \protect\url{pablo.kogan@gmail.com}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}

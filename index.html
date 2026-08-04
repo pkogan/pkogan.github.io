@@ -1,14 +1,105 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>pkogan init</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>pkogan init</h1>
-        <h3><a href="CV/pk202409en.pdf">CV in english</a></h3>
-        <h3><a href="CV/pk202409es.pdf">CV en español</a></h3>
+<html lang="en">
+<head>
+    <title>pkogan@init:~</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Linux virtual console (TTY) look: full-screen framebuffer, no window chrome. */
+        :root {
+            --bg: #000000;
+            --text: #cfcfcf;
+            --green: #4ee44e;
+            --cyan: #4ed6d6;
+            --amber: #d7a441;
+            --dim: #8a8a8a;
+        }
 
-    </body>
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            min-height: 100%;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Consolas", "DejaVu Sans Mono", "Liberation Mono", "SFMono-Regular", Menlo, monospace;
+            font-size: 16px;
+            line-height: 1.5;
+            min-height: 100vh;
+            padding: 20px 18px;
+        }
+
+        /* Subtle CRT scanlines over the whole console. */
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0) 0px,
+                rgba(0, 0, 0, 0) 2px,
+                rgba(0, 0, 0, 0.18) 3px
+            );
+        }
+
+        .console {
+            max-width: 900px;
+        }
+
+        .line { white-space: pre-wrap; word-break: break-word; }
+
+        .prompt .user { color: var(--green); }
+        .prompt .host { color: var(--green); }
+        .prompt .path { color: var(--cyan); }
+        .prompt .sym  { color: var(--text); }
+
+        .comment { color: var(--dim); }
+        .out { color: var(--text); }
+
+        a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+        a:hover {
+            color: #fff;
+            background: var(--cyan);
+        }
+
+        .files { margin: 0; }
+        .files .perm { color: var(--dim); }
+        .files .name { color: var(--green); }
+
+        .cursor {
+            display: inline-block;
+            width: 9px;
+            height: 1.05em;
+            background: var(--text);
+            vertical-align: text-bottom;
+            animation: blink 1s steps(1) infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .spacer { height: 12px; }
+    </style>
+</head>
+<body>
+    <div class="console">
+        <div class="line prompt"><span class="user">pkogan</span><span class="sym">@</span><span class="host">init</span><span class="sym">:</span><span class="path">~</span><span class="sym">$</span> whoami</div>
+        <div class="line out">Pablo Kogan &mdash; Full-Stack Developer / Data Scientist / IT Manager</div>
+
+        <div class="spacer"></div>
+
+        <div class="line prompt"><span class="user">pkogan</span><span class="sym">@</span><span class="host">init</span><span class="sym">:</span><span class="path">~</span><span class="sym">$</span> ls -l ./cv</div>
+        <div class="line files"><span class="perm">-rw-r--r--</span>  <a class="name" href="CV/pk202608en.pdf">pk202608en.pdf</a>   <span class="comment"># CV in English</span></div>
+        <div class="line files"><span class="perm">-rw-r--r--</span>  <a class="name" href="CV/pk202608es.pdf">pk202608es.pdf</a>   <span class="comment"># CV en Español</span></div>
+
+        <div class="spacer"></div>
+
+        <div class="line prompt"><span class="user">pkogan</span><span class="sym">@</span><span class="host">init</span><span class="sym">:</span><span class="path">~</span><span class="sym">$</span> <span class="cursor"></span></div>
+    </div>
+</body>
 </html>
