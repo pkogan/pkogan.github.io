@@ -2,8 +2,10 @@
 #
 # Build a new version of the CV PDFs and wire them into index.html.
 #
-#   latext/main.tex        -> CV/pkYYYYMMen.pdf
-#   latext/mainspanish.tex -> CV/pkYYYYMMes.pdf
+#   latext/main.tex             -> CV/pkYYYYMMen.pdf
+#   latext/mainspanish.tex      -> CV/pkYYYYMMes.pdf
+#   latext/academic.tex         -> CV/pkacYYYYMMen.pdf
+#   latext/academicspanish.tex  -> CV/pkacYYYYMMes.pdf
 #
 # Usage:
 #   ./build_cv.sh            # uses the current year+month
@@ -59,6 +61,12 @@ sed -i '' -E \
     -e "s#CV/pk[0-9]{6}es\.pdf#CV/pk${STAMP}es.pdf#g" \
     "$LATEX_DIR/main.tex" "$LATEX_DIR/mainspanish.tex"
 
+# Same for the academic variants (pkac###### links).
+sed -i '' -E \
+    -e "s#CV/pkac[0-9]{6}en\.pdf#CV/pkac${STAMP}en.pdf#g" \
+    -e "s#CV/pkac[0-9]{6}es\.pdf#CV/pkac${STAMP}es.pdf#g" \
+    "$LATEX_DIR/academic.tex" "$LATEX_DIR/academicspanish.tex"
+
 # ---------------------------------------------------------------- build
 # args: <source.tex> <output-basename>
 build_pdf() {
@@ -82,15 +90,21 @@ build_pdf() {
     echo "   -> $CV_DIR/$out.pdf"
 }
 
-build_pdf "$LATEX_DIR/main.tex"        "pk${STAMP}en"
-build_pdf "$LATEX_DIR/mainspanish.tex" "pk${STAMP}es"
+build_pdf "$LATEX_DIR/main.tex"            "pk${STAMP}en"
+build_pdf "$LATEX_DIR/mainspanish.tex"     "pk${STAMP}es"
+build_pdf "$LATEX_DIR/academic.tex"        "pkac${STAMP}en"
+build_pdf "$LATEX_DIR/academicspanish.tex" "pkac${STAMP}es"
 
 # ---------------------------------------------------------------- index
 echo ">> updating index.html references"
-# Point both links at the freshly built versions.
+# Point every link at the freshly built versions.
 # Matches both the href (CV/pk######en.pdf) and any bare filename shown as
-# link text (pk######en.pdf), so displayed names stay in sync.
+# link text (pk######en.pdf), so displayed names stay in sync. The plain
+# pk###### rules can't touch the academic pkac###### links because a letter
+# (not a digit) follows "pk" there.
 sed -i '' -E \
+    -e "s#pkac[0-9]{6}en\.pdf#pkac${STAMP}en.pdf#g" \
+    -e "s#pkac[0-9]{6}es\.pdf#pkac${STAMP}es.pdf#g" \
     -e "s#pk[0-9]{6}en\.pdf#pk${STAMP}en.pdf#g" \
     -e "s#pk[0-9]{6}es\.pdf#pk${STAMP}es.pdf#g" \
     "$INDEX_HTML"

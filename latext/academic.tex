@@ -1,0 +1,259 @@
+% Academic CV -- Pablo Kogan
+% Same visual style as main.tex (simplehipstercv), academic content merged
+% from the CVar record (Ministerio de Ciencia, Tecnologia e Innovacion).
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+% Breakable, hanging-indent list entries (safe across page breaks inside paracol)
+\newcommand{\entry}[2]{\par\smallskip\noindent\hangindent=2.4em\hangafter=1{\color{cvgreen}\bfseries #1}\quad #2\par}
+\newcommand{\pubitem}[2]{\par\smallskip\noindent\hangindent=1.8em\hangafter=1{\color{cvpurple}\bfseries #1}\quad #2\par}
+
+%------------------------------------------------------------------
+\title{Academic CV}
+\author{\LaTeX{} pkogan}
+\date{Agosto 2026}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Pablo}{Kogan}{Academic CV -- Electoral Systems, CS Education \& Artificial Intelligence}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+
+\paracolbackgroundoptions
+
+\footnotesize
+\begin{center}
+\href{https://pkogan.github.io/CV/pkac202608en.pdf}{English Academic CV}  |    
+\href{https://pkogan.github.io/CV/pkac202608es.pdf}{CV Académico ES}    
+\end{center}
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{avatar}
+\end{center}
+
+\bg{cvgreen}{white}{About me}\\[0.5em]
+
+{\footnotesize
+Computer Scientist and university professor with 20+ years of experience in software development, teaching, research and technology transfer. My academic work focuses on informatics applied to electoral systems, computer science education and artificial intelligence (multi-agent systems). Associate Professor at Universidad Nacional del Comahue, where I also lead extension, research and innovation projects. Currently a GenAI Consultant at Scale AI.
+}
+\bigskip
+
+\bg{cvgreen}{white}{Personal} \\[0.5em]
+Pablo Kogan
+
+nationality: Argentina
+
+born: 1980
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+Electoral Systems ~•~ CS Education ~•~ Artificial Intelligence ~•~ Multi-agent Systems ~•~ Generative AI ~•~ Full-Stack Development
+
+\bigskip
+
+\bg{cvgreen}{white}{Languages}\\[0.5em]
+
+\begin{tabular}{l | ll}
+\textbf{Spanish} &  & {\phantom{x}\footnotesize mother} \\
+\textbf{English} &  & \pictofraction{\faCircle}{cvgreen}{4}{black!30}{1}{\tiny}
+\end{tabular}
+
+\bigskip
+
+\bg{cvgreen}{white}{Interests}\\[0.5em]
+
+\texttt{Free Software} ~/~ \texttt{Generative AI} ~/~ \texttt{Electoral Systems} ~/~ \texttt{Learning Platforms}
+
+\vspace{2em}
+\bigskip
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/pablo-kogan/}{pablo-kogan}}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/pkogan}{pkogan}}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Academic Background}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2020--present}{Master in Computer Science \emph{(thesis in progress)}}{Universidad Nacional del Comahue}{Neuquén\color{headerblue}}{}{unco.png}  \\
+    \cvevent{2012--present}{Specialization in Technological Management \emph{(final work in progress)}}{Universidad Nacional de Río Negro}{Río Negro\color{headerblue}}{}{unrn.jpg}  \\
+    \cvevent{1999--2006}{Bachelor in Computer Science}{Universidad Nacional del Comahue}{Neuquén\color{headerblue}}{}{unco.png}  \\
+    \cvevent{1999--2004}{Analyst in Computer Science}{Universidad Nacional del Comahue}{Neuquén\color{headerblue}}{}{unco.png}
+\end{tabular}
+\vspace{1em}
+
+\section*{Academic Positions}
+\entry{2024--present}{Associate Professor \emph{(part-time)} — \emph{Elements of Theory of Computation}. Faculty of Informatics, UNCo.}
+\entry{2017--2024}{Associate Professor \emph{(part-time)} — \emph{Elements of Theory of Computation; AI in Games}. Faculty of Informatics, UNCo.}
+\entry{2014--2017}{Teaching Assistant \emph{(part-time)} — \emph{Elements of Theory of Computation; AI in Games}. Faculty of Informatics, UNCo.}
+\entry{2012--2015}{Associate Professor \emph{(simple)} — Web Development Technical Degree. Faculty of Informatics, UNCo.}
+\entry{2011--2014}{First Assistant \emph{(part-time)} — \emph{Elements of Theory of Computation}. Faculty of Informatics, UNCo.}
+\entry{2008--2014}{Teaching Assistant \emph{(simple)} — Web Development Technical Degree. Faculty of Informatics, UNCo.}
+\entry{2005--2011}{First Assistant \emph{(simple)} — \emph{Elements of Theory of Computation}. Faculty of Informatics, UNCo.}
+
+\section*{University Management}
+\entry{2022--2023}{Undersecretary of Information Technology, UNCo.}
+\entry{2018--2022}{Secretary of Extension, Faculty of Informatics, UNCo.}
+\entry{2022--2026}{Superior Council Member, UNCo.}
+\entry{2014--2018}{Superior Council Member, UNCo.}
+\entry{2014--2018}{Directive Council Member, Faculty of Informatics, UNCo.}
+\entry{2014--2018}{Advisor, UNCo.}
+\entry{2012--2015}{Coordinator, Web Development Technical Degree, UNCo.}
+
+\section*{Professional Experience (Industry)}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2024--present}{Gen AI Consultant}{Scale AI}{Full remote \color{cvred}}{Design and evaluation of AI agents to assess data quality and improve model performance and reliability.}{scale.png} \\
+    \cvevent{2010--present}{Full-Stack Developer / Data Scientist}{Freelance — cortitoyalpie}{Neuquén \color{cvred}}{Software development for Oil\&Gas, games and learning solutions; data science for electoral systems; Machine Learning in Generative AI.}{cortito.png} \\
+    \cvevent{2007--2010}{Full-Stack Developer / Project Leader / IT Manager}{ciar S.A.}{Neuquén \color{cvred}}{Development of GIS solutions for the Oil\&Gas industry.}{ciar.jpg}
+\end{tabular}
+\vspace{1em}
+
+\section*{Research Projects}
+\entry{2011}{Category V — National Program of Incentives for Teacher-Researchers.}
+\entry{2022--2025}{Researcher — \emph{Computación Aplicada a las Ciencias y al Medio}. Dir. C. Fracchia. Faculty of Informatics, UNCo.}
+\entry{2017--2020}{Researcher — \emph{Agentes Inteligentes. Modelos Formales y Aplicaciones para la Educación}. Dir. G. Parra. UNCo.}
+\entry{2013--2016}{Researcher — \emph{Agentes Inteligentes en Entornos Dinámicos}. Dir. G. Parra. UNCo.}
+\entry{2010--2012}{Researcher — \emph{Sistemas Multiagentes en Ambientes Dinámicos: Planificación, Razonamiento y Tecnologías del Lenguaje Natural}. Dir. G. Parra. UNCo.}
+
+\section*{Grants \& Research Stays}
+\entry{2016--2017}{Postgraduate/Master scholarship — \emph{Programa de Formación de RRHH en Política y Gestión de la CyT}. MINCyT. Dir. J. C. Del Bello.}
+\entry{2014}{R\&D stay — \emph{Web application: agrochemical-application traffic-light}. INTA (EEA Alto Valle) / UNRN. Dir. D. Fernández.}
+
+\section*{Extension \& Outreach Projects}
+\entry{2026--present}{Member — \emph{Conectando Saberes}. Faculty of Informatics, UNCo.}
+\entry{2025--2026}{Member — \emph{Conectando Saberes}. Faculty of Informatics, UNCo.}
+\entry{2024--2025}{Co-director — \emph{FaIComm: Pensando en red}. Faculty of Informatics, UNCo.}
+\entry{2023--2024}{Co-director — \emph{FAICOMM: Charlando sobre Informática}. Faculty of Informatics, UNCo.}
+\entry{2023}{Statistical Specialist — \emph{OAS Electoral Observation Mission}, Ecuador 2023 (snap presidential \& legislative elections and popular consultations: Yasuní and Chocó Andino). Organization of American States (OAS).}
+\entry{2023}{Instructor — \emph{La ciudadanía en un mundo atravesado por computadoras}. Faculty of Informatics, UNCo.}
+\entry{2021--present}{Coordinator — \emph{Electoral Observatory, UNCo}.}
+\entry{2021--2025}{\emph{ControlZ}.}
+\entry{2022}{\emph{Hola Mundo — First steps in programming}. Prov. Neuquén / UNCo.}
+\entry{2021}{Director — \emph{Vocaciones TICs}. Fundación Sadosky.}
+\entry{2020--2022}{\emph{Conectados con la Escuela: Desafíos virtuales para aprender computación}. Dir. J. Rodríguez.}
+\entry{2019--2020}{\emph{Registro informatizado de Rescates para Guardavidas de Neuquén y Río Negro}. Dir. A. Flores.}
+\entry{2019--present}{\emph{Grupo Montun de Tecnologías Libres}.}
+\entry{2019}{Co-director — \emph{Desafíos para Escuela Media: Resolución de Problemas y Programación}. Dir. I. Godoy.}
+\entry{2018}{\emph{Torneos de resolución de problemas y programación para promover el aprendizaje en la Escuela Media}.}
+\entry{2017}{\emph{Torneos de Programación para promover el aprendizaje en Escuela Media}.}
+\entry{2016}{\emph{La competencia como eje motivador para acercarnos a la programación}.}
+\entry{2015--present}{Coordinator — \emph{Grupo de Desarrollo Euclides}.}
+\entry{2015}{\emph{Olimpiadas de Programación para la Escuela Media}.}
+\entry{2014}{\emph{Entrenamiento en la programación de la computadora a partir de una aplicación para competencias}.}
+\entry{2014}{\emph{Construcción conjunta de herramientas agromáticas de gestión para los productores frutícolas de los Valles de la Norpatagonia}.}
+\entry{2013}{\emph{Con la escuela media programamos robots y conocemos más sobre Computación}.}
+
+\section*{Postgraduate \& Student Supervision}
+\entry{2020--2022}{Co-direction of grade thesis — Stacco, Joan Manuel. UNCo.}
+\entry{2019--2023}{Co-direction of grade thesis — Gómez, Gladys Beatríz. UNCo.}
+\entry{2019--2023}{Co-direction of grade thesis — Soto, Silvia Vanesa. UNCo.}
+\entry{2015--2025}{Direction of \textbf{35+} pre-professional internships, Faculty of Informatics, UNCo.}
+
+\section*{Evaluation \& Editorial Activities}
+\entry{2019--present}{Thesis and final-work jury, Faculty of Informatics, UNCo.}
+\entry{2018--present}{Evaluator of academic programs and projects, UNCo.}
+\entry{2019--present}{Reviewer — journal \emph{Actualidades Investigativas en Educación}.}
+
+\section*{Awards}
+\entry{2022}{National e-Government Award (15th ed.) — Monographs. SADIO.}
+
+\section*{Selected Publications}
+{\small\textbf{Journal articles}}
+\pubitem{2016}{C. Fracchia, P. Kogan, S. Amaro. ``Competir + Motivar + Hornero = aprender programación''. \emph{Rev. Iberoamericana de Tecnología en Educación y Educación en Tecnología}, no. 18: 19--29.}
+\pubitem{2014}{M. Leskovar, M. L. Malaspina, L. Podgornik, P. Villarreal, G. Grosso, D. Fernández, P. Kogan, J. M. Relloso. ``Construcción conjunta de herramientas agromáticas de gestión para los productores frutícolas de los Valles de la Norpatagonia''. \emph{Revista SNS}, no. 5: 91--95.}
+\pubitem{2010}{L. Cecchi, C. Vaucheret, M. Moya, P. Kogan, R. Del Castillo, G. Torres. ``Un enfoque basado en competencias de sistemas multiagentes para la enseñanza de Inteligencia Artificial''. \emph{Rev. Iberoamericana de Tecnología en Educación y Educación en Tecnología}, no. 5: 6--12.}
+
+\medskip
+{\small\textbf{Conferences \& workshops}}
+\pubitem{2024}{P. Kogan, D. Zacharias, J. Rodríguez, C. Giménez. ``¿Alfabetización en Ciencias de la Computación en la escuela para favorecer la construcción de nuevas ciudadanías?''. SIE 2024 — JAIIO 53.}
+\pubitem{2023}{P. Kogan, D. Zacharias, J. Rodríguez, C. Giménez. ``Desafío: votar con tres sistemas el mismo día''. SIE 2023 — JAIIO 52.}
+\pubitem{2022}{P. Kogan, S. Soto, C. Vaucheret, D. Zacharias. ``¿Cómo aumentar la velocidad de publicación de resultados de una elección?''. SIE 2022 — JAIIO 51.}
+\pubitem{2022}{J. Rodríguez, P. Kogan, G. Guerrero, G. Pereyra. ``Diseño participativo de secuencias didácticas basadas en el desarrollo de aplicaciones móviles en la escuela''. CACIC 2022.}
+\pubitem{2021}{C. Castro, P. Kogan, R. Lagori. ``Sistema de votación online para entornos académicos, corporativos y organizacionales basado en blockchain''. SIE 2021 — JAIIO 50.}
+\pubitem{2020}{J. M. Stacco, P. Kogan, J. Rodríguez, C. Fracchia. ``Zorzal: un ambiente colaborativo basado en bloques para competencias de programación''. 49 JAIIO.}
+\pubitem{2020}{``Competencia de Programación en Bloques Colaborativa''. XIV TE\&ET 2020.}
+\pubitem{2019}{P. Kogan, S. Soto, C. Vaucheret. ``Gukena: aportes al proceso de Fiscalización Electrónica. Boleta Única Electrónica, Elecciones 2019, Neuquén''. 48 JAIIO.}
+\pubitem{2019}{M. Salazar, J. Rodríguez, P. Kogan, L. Cecchi. ``SQLBloques: entorno basado en bloques para la enseñanza de Bases de Datos en la Escuela Secundaria''. TE\&ET 2019.}
+\pubitem{2018}{S. Soto, C. Ramos, P. Kogan, C. Vaucheret. ``Gukena: escrutinio descentralizado para voto ponderado''. 47 JAIIO.}
+\pubitem{2018}{F. Amigone, P. Kogan, G. Michelan, J. Rodríguez. ``Edimbrujo: definiendo un modelo didáctico para la enseñanza de la Inteligencia Artificial en Juegos''. XIII TE\&ET.}
+\pubitem{2018}{F. Amigone, P. Kogan, G. Michelan, J. Rodríguez. ``Edimbrujo: hacia la definición de un modelo didáctico para la enseñanza de la IA en juegos''. WICC 2018.}
+\pubitem{2017}{P. Kogan, J. Rodríguez, F. Amigone. ``Agente Hornero: ampliando las posibilidades de aprender a programar''. WICC 2017.}
+\pubitem{2017}{M. Amaolo, D. Dolz, G. Grosso, P. Kogan. ``Agentes inteligentes: modelos formales y aplicaciones para la educación''. WICC 2017.}
+\pubitem{2017}{P. Kogan, G. Grosso, A. Rodríguez, C. Magdalena, A. Muñoz, E. Benítez Piccini, D. Fernández. ``Desarrollo web de un semáforo indicador de condiciones climáticas para la aplicación de agroquímicos en fruticultura''. CAI 2017 — JAIIO 46 / CLEI.}
+\pubitem{2015}{C. Fracchia, P. Kogan, S. Amaro. ``Hornero: aplicación para gestión de torneos de programación, multi-paradigma, multi-plataforma, multi-lenguaje''. III JCC\&BD.}
+\pubitem{2015}{D. Trevisani, G. Braun, M. Moya, P. Kogan. ``Agentes inteligentes en ambientes dinámicos''. WICC 2015.}
+\pubitem{2014}{C. Fracchia, P. Kogan, A. Alonso de Armiño, I. Godoy. ``Realización de torneos de programación como estrategia para la enseñanza y el aprendizaje de programación''. CACIC 2014.}
+\pubitem{2014}{P. Kogan, F. Buccella, S. Roger. ``Agentes inteligentes en ambientes dinámicos: minería de opiniones en Twitter''. WICC 2014.}
+\pubitem{2013}{S. Roger, P. Kogan. ``Agentes inteligentes en ambientes dinámicos: análisis de opinión''. WICC 2013.}
+\pubitem{2011}{``Sistemas multiagentes en ambientes dinámicos''. WICC 2011.}
+\pubitem{2010}{M. Moya, P. Kogan, G. Parra, L. Cecchi. ``Sistemas multiagentes en ambientes dinámicos: planificación''. WICC 2010.}
+\pubitem{2007}{P. Kogan, M. Moya, G. Torres, L. Cecchi. ``Rakiduam: un equipo de fútbol con licencia GNU GPL''. V Campeonato Argentino de Fútbol con Robots.}
+\pubitem{2006}{P. Kogan, G. Parra. ``Análisis de requerimientos de un sistema multiagente de robots que juegan al fútbol''. CACIC 2006.}
+\pubitem{2006}{P. Kogan, J. Yañez, C. Campagnon, L. Cecchi. ``Aspectos de diseño e implementación del equipo de fútbol con robots RAKIDUAM''. CAFR 2006.}
+\pubitem{2006}{P. Kogan, G. Parra, R. Del Castillo. ``Diseño de agentes experimentando con robots que juegan al fútbol en ambientes reales y simulados''. WICC 2006.}
+
+\section*{Software Developments}
+\pubitem{2014}{\href{https://hornero.fi.uncoma.edu.ar/hornero/\#/inicio}{\emph{hornero}} — Programming Tournaments Management System. (with J. M. Stacco)}
+\pubitem{2015}{\href{https://resultados.uncoma.edu.ar}{\emph{gukena}} — Elections computing center. (with S. V. Soto)}
+\pubitem{2016}{\emph{mocovi} — University processes management. (with A. Granados)}
+\pubitem{2020}{\href{https://wene.fi.uncoma.edu.ar}{\emph{wene}} — Digital Certificate Management. (with S. V. Soto)}
+
+\section*{Artistic Production}
+\pubitem{2021}{\emph{Control-Z} — Sound design. (J. Rodríguez, C. Giménez, P. Kogan)}
+
+\vfill{}
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Pablo Kogan
+\icon{\faMapMarker}{cvgreen}{} General Fernandez Oro - Río Negro - Argentina \icon{\faPhone}{cvgreen}{} +542994229210 \newline\icon{\faAt}{cvgreen}{} \protect\url{pablo.kogan@fi.uncoma.edu.ar}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
